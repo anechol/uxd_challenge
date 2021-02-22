@@ -1,1 +1,103 @@
-/* Add your styles below! (feel free to delete this comment) */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+html {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  color: #526275; }
+
+.meetingcard {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #E0E7F1;
+  border-radius: 6px;
+  border-left: 4px solid #23856D;
+  padding: 0 24px 0 20px;
+  position: relative;
+  width: 668px; }
+  .meetingcard h1 {
+    color: #263240;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0; }
+  .meetingcard p {
+    margin: 0; }
+  .meetingcard a:focus,
+  .meetingcard a:active,
+  .meetingcard button:focus,
+  .meetingcard button:active {
+    outline: 2px solid #0077ff; }
+  .meetingcard__avatar {
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.18)); }
+  .meetingcard__details, .meetingcard__links, .meetingcard__time, .meetingcard__date, .meetingcard__location {
+    display: flex; }
+    .meetingcard__details svg, .meetingcard__links svg, .meetingcard__time svg, .meetingcard__date svg, .meetingcard__location svg {
+      margin-right: 8px; }
+  .meetingcard__details {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 24px;
+    padding: 16px 0; }
+  .meetingcard__links {
+    justify-content: space-between;
+    margin: 12px 0 16px; }
+  .meetingcard__time, .meetingcard__date {
+    align-items: center; }
+  .meetingcard__date {
+    margin-left: 24px; }
+  .meetingcard__location {
+    align-items: center; }
+    .meetingcard__location a {
+      color: #526275;
+      text-decoration: none; }
+  .meetingcard__options {
+    margin-left: auto; }
+    .meetingcard__options button {
+      border: none;
+      background: none;
+      padding: 0; }
+      .meetingcard__options button:hover {
+        cursor: pointer; }
+  @media (max-width: 500px) {
+    .meetingcard {
+      width: 100%;
+      flex-direction: column;
+      padding: 16px;
+      position: relative; }
+      .meetingcard__details {
+        margin: 16px 0 0 0;
+        padding: 0; }
+      .meetingcard__links {
+        flex-direction: column; }
+      .meetingcard__date {
+        margin: 16px 0 0 0; }
+      .meetingcard__options {
+        margin: 0;
+        position: absolute;
+        right: 24px; } }
+
+.sr-only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
+/*# sourceMappingURL=styles.css.map */
