@@ -5,7 +5,6 @@
 
 html, body {
     height: 100%;
-    margin: 0;
 }
 
 html {
@@ -29,7 +28,8 @@ body {
     border: 2px solid #E0E7F1;
     border-radius: 6px;
     border-left: 4px solid #23856D;
-    padding: 0 24px;
+    padding: 0 24px 0 20px;
+    position: relative;
     // Using hard-coded width here just 
     // for the purposes of the challenge
     width: 668px;
@@ -45,7 +45,10 @@ body {
         margin: 0;
     }
 
-    a:focus, a:active, button:focus, button:active {
+    a:focus, 
+    a:active, 
+    button:focus, 
+    button:active {
         outline: 2px solid rgb(0, 119, 255);
     }
 
@@ -97,6 +100,37 @@ body {
             border: none;
             background: none;
             padding: 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        flex-direction: column;
+        padding: 16px;
+        position: relative;
+
+        &__details {
+            margin: 16px 0 0 0;
+            padding: 0;
+        }
+
+        &__links {
+            flex-direction: column;
+
+        }
+
+        &__date {
+            margin: 16px 0 0 0
+        }
+        
+        &__options {
+            margin: 0;
+            position: absolute;
+            right: 24px;
         }
     }
 }

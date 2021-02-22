@@ -2,8 +2,7 @@
   box-sizing: border-box; }
 
 html, body {
-  height: 100%;
-  margin: 0; }
+  height: 100%; }
 
 html {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -24,7 +23,8 @@ body {
   border: 2px solid #E0E7F1;
   border-radius: 6px;
   border-left: 4px solid #23856D;
-  padding: 0 24px;
+  padding: 0 24px 0 20px;
+  position: relative;
   width: 668px; }
   .meetingcard h1 {
     color: #263240;
@@ -33,7 +33,10 @@ body {
     margin: 0; }
   .meetingcard p {
     margin: 0; }
-  .meetingcard a:focus, .meetingcard a:active, .meetingcard button:focus, .meetingcard button:active {
+  .meetingcard a:focus,
+  .meetingcard a:active,
+  .meetingcard button:focus,
+  .meetingcard button:active {
     outline: 2px solid #0077ff; }
   .meetingcard__avatar {
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.18)); }
@@ -64,6 +67,25 @@ body {
       border: none;
       background: none;
       padding: 0; }
+      .meetingcard__options button:hover {
+        cursor: pointer; }
+  @media (max-width: 500px) {
+    .meetingcard {
+      width: 100%;
+      flex-direction: column;
+      padding: 16px;
+      position: relative; }
+      .meetingcard__details {
+        margin: 16px 0 0 0;
+        padding: 0; }
+      .meetingcard__links {
+        flex-direction: column; }
+      .meetingcard__date {
+        margin: 16px 0 0 0; }
+      .meetingcard__options {
+        margin: 0;
+        position: absolute;
+        right: 24px; } }
 
 .sr-only {
   border: 0;
